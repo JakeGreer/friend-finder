@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style/style.css">
+</head>
+
+<body>
+    <div class="jumbotron">
+        <h1 class="display-3">Survey</h1>
+        <p class="lead">Answer the following questions to best match yourself</p>
+        <hr class="my-4">
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form>
+                    <div class="form-group">
+                        <label for="nameInput">Name (Required)</label>
+                        <input type="text" class="form-control" id="nameInput" placeholder="John" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="passwordInput">Image Link (Required)</label>
+                        <input type="text" class="form-control" id="imageLink" placeholder="https://helloworld.com/" required>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 1</h3>
+                        <label for="q-one">Your mind is always buzzing with unexplored ideas and plans.</label>
+                        <select class="custom-select d-block my-1" id="q-one" required>
+                          <option selected>Select an option..</option>
+                          <option value="1">1 (Inaccurate)</option>
+                          <option value="2">2</option>
+                          <option value="3">3</option>
+                          <option value="4">4</option>
+                          <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 2</h3>
+                        <label for="q-two">You make friends easily.</label>
+                        <select class="custom-select d-block my-1" id="q-two" required>
+                              <option selected>Select an option..</option>
+                              <option value="1">1 (Inaccurate)</option>
+                              <option value="2">2</option>
+                              <option value="3">3</option>
+                              <option value="4">4</option>
+                              <option value="5">5 (Accurate)</option>
+                            </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 3</h3>
+                        <label for="q-three">You like to solve complex problems.</label>
+                        <select class="custom-select d-block my-1" id="q-three" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 4</h3>
+                        <label for="q-four">You are afraid of doing the wrong thing.</label>
+                        <select class="custom-select d-block my-1" id="q-four" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 5</h3>
+                        <label for="q-five">People can rarely upset you.</label>
+                        <select class="custom-select d-block my-1" id="q-five" required>
+                                <option selected>Select an option..</option>
+                                <option value="1">1 (Inaccurate)</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                                <option value="4">4</option>
+                                <option value="5">5 (Accurate)</option>
+                            </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 6</h3>
+                        <label for="q-six">It is often difficult for you to relate to other people’s feelings.</label>
+                        <select class="custom-select d-block my-1" id="q-six" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 7</h3>
+                        <label for="q-seven">In a discussion, truth should be more important than people’s sensitivities.</label>
+                        <select class="custom-select d-block my-1" id="q-seven" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 8</h3>
+                        <label for="q-eight">You rarely get carried away by fantasies and ideas.</label>
+                        <select class="custom-select d-block my-1" id="q-eight" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 9</h3>
+                        <label for="q-nine">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
+                        <select class="custom-select d-block my-1" id="q-nine" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 10</h3>
+                        <label for="q-ten">You rather hang with a group of people rather than be by yourself.</label>
+                        <select class="custom-select d-block my-1" id="q-ten" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 11</h3>
+                        <label for="q-eleven">You see beauty in things that others might not notice.</label>
+                        <select class="custom-select d-block my-1" id="q-eleven" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 12</h3>
+                        <label for="q-twelve">You are afraid of drawing attention to yourself.</label>
+                        <select class="custom-select d-block my-1" id="q-twelve" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <div class="form-group questions">
+                        <h3>Question 13</h3>
+                        <label for="q-thirteen">You express childlike joy.</label>
+                        <select class="custom-select d-block my-1" id="q-thirteen" required>
+                            <option selected>Select an option..</option>
+                            <option value="1">1 (Inaccurate)</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5 (Accurate)</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="form-group btn btn-primary">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js" integrity="sha384-h0AbiXch4ZDo7tp9hKZ4TsHbi047NrKGLO3SEJAg45jXxnGIfYzk4Si90RDIqNm1" crossorigin="anonymous"></script>
+</body>
+
+</html>

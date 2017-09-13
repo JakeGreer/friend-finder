@@ -1,0 +1,4 @@
+.questions:nth-child(odd) {
+    background-color: #eee;
+    padding: 10px;
+}
