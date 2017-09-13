@@ -1,7 +1,7 @@
 {
   "name": "friend-finder",
   "version": "1.0.0",
-  "description": "",
+  "description": "An application that allows user to find best possible matches to their personalities",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -12,13 +12,17 @@
     "url": "git+https://github.com/JakeGreer/friend-finder.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Jake Greer",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/JakeGreer/friend-finder/issues"
   },
   "homepage": "https://github.com/JakeGreer/friend-finder#readme",
   "dependencies": {
-    "mysql": "^2.14.1"
-  }
+    "body-parser": "^1.18.1",
+    "express": "^4.15.4",
+    "mysql": "^2.14.1",
+    "path": "^0.12.7"
+  },
+  "devDependencies": {}
 }
