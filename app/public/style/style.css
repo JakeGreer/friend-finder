@@ -1,4 +1,46 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+hr {
+    background-color: #fff;
+}
+
+.jumbotron {
+    background-color: #428bca;
+    color: #fff;
+    text-shadow: 1px 1px 2px black;
+}
+
+.modal-info {
+    border-bottom: 2px solid #428bca;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+
 .questions:nth-child(odd) {
     background-color: #eee;
     padding: 10px;
+}
+
+.questions h3 {
+    text-shadow: 1px 1px 2px black;
+}
+
+form label {
+    font-size: 20px;
+}
+
+.btn-primary {
+    box-shadow: 2px 2px 2px black;
+}
+
+.last-q {
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+}
+
+.submit {
+    margin-top: 20px;
+    margin-bottom: 40px;
 }
