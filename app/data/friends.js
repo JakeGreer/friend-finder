@@ -61,7 +61,7 @@
 // ];
 var friends = [{
         name: "Jake",
-        link: "https://jakegreer.net/assets/images/headpic2.jpg",
+        link: "http://www.metalinjection.net/wp-content/uploads/2014/08/Giraffe-Tongue-Orchestra.jpg",
         scores: [5, 4, 4, 2, 5, 3, 4, 2, 3, 2, 5, 2, 5]
     },
     {
