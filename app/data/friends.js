@@ -1,21 +1,3 @@
-$("#submit").on("click", function(event) {
-    event.preventDefault();
-    var newFriend = {
-        name: $("#nameInput").val().trim(),
-        link: $("#imageLink").val().trim(),
-        scores: [$("#q-one"), $("#q-two"), $("#q-three"), $("#q-four"), $("#q-five"), $("#q-six"),
-            $("#q-seven"), $("#q-eight"), $("#q-nine"), $("#q-ten"), $("#q-eleven"), $("#q-twelve"), $("#q-thirteen")
-        ]
-    }
-
-    $.post("/api/new", newFriend)
-        .done(function(data) {
-            console.log(data);
-            alert("Adding you as a friend...");
-        });
-})
-
-
 //requires the node file system
 var fs = require("fs");
 
@@ -75,4 +57,4 @@ fs.readFile("app/data/friends.txt", "utf8", function(err, data) {
 })
 
 //exports the final array
-exports.friendsList;
+module.exports = friendsList;
