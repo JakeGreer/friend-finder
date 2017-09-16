@@ -49,7 +49,7 @@ module.exports = function(app) {
         console.log("Lowest: " + lowest + " Location: " + index);
         //adds the new friend to the api list
         friends.push(newFriend);
-        res.json(newFriend);
+        res.json(friends[index]);
 
     });
 }

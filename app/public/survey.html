@@ -23,11 +23,13 @@
 
     </div>
 
-    <div class="container" id="friendModal">
+    <div class="container">
+
+        <!-- Form -->
         <div class="row">
             <div class="col-md-12">
                 <form method="POST" role="form">
-                    <div class="modal-info">
+                    <div>
                         <div class="form-group">
                             <label for="nameInput">Name (Required)</label>
                             <input type="text" class="form-control" id="nameInput" placeholder="John" required>
@@ -37,8 +39,6 @@
                             <input type="text" class="form-control" id="imageLink" placeholder="https://helloworld.com/" required>
                         </div>
                     </div>
-
-
                     <div class="form-group questions">
                         <h3>Question 1</h3>
                         <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
@@ -195,8 +195,31 @@
                             <option value="5">5 (Accurate)</option>
                         </select>
                     </div>
-                    <button data-toggle="modal" data-target="#myModal" type="submit" class="text-center center-block form-group btn btn-primary btn-lg submit" id="submit">Submit</button>
+                    <button type="submit" class="text-center center-block form-group btn btn-primary btn-lg submit" id="submit">Submit</button>
                 </form>
+
+
+                <!-- Modal -->
+                <div id="resultsModal" class="modal fade center-block text-center" role="dialog">
+                    <div class="modal-dialog">
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                            <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h2 class="modal-title"><strong>Best Match</strong></h2>
+                            </div>
+                            <div class="modal-body">
+                            <h2 id="matchName"></h2>
+                            <img id="matchImg" src="http://jakegreer.net/assets/images/headpic2.jpg" alt="Jake Greer">
+                            </div>
+                            <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Api Links -->
                 <div class="col-md-12 text-center" id="api">
                     <a href="/">Home</a> | <a href="/api/friends">API Friends Link</a>
                 </div>
@@ -217,99 +240,64 @@
             $("#submit").on("click", function(event) {
                 event.preventDefault();
 
-                //builds a new friend object based off of the input
-                var friend = {
-                    name: $("#nameInput").val().trim(),
-                    link: $("#imageLink").val().trim(),
-                    scores: [
-                        $("#q-one").val(),
-                        $("#q-two").val(),
-                        $("#q-three").val(),
-                        $("#q-four").val(),
-                        $("#q-five").val(),
-                        $("#q-six").val(),
-                        $("#q-seven").val(),
-                        $("#q-eight").val(),
-                        $("#q-nine").val(),
-                        $("#q-ten").val(),
-                        $("#q-eleven").val(),
-                        $("#q-twelve").val(),
-                        $("#q-thirteen").val()
-                    ]
+                // Form validation
+                function validateForm() {
+                    var isValid = true;
+                    $('.form-control').each(function() {
+                        if ( $(this).val() === '' )
+                            isValid = false;
+                    });
+
+                    $('.chosen-select').each(function() {
+
+                        if( $(this).val() === "")
+                            isValid = false
+                    });
+
+                    return isValid;
                 }
 
+                // If all required fields are filled
+                if (validateForm() == true) {
+
+                    //builds a new friend object based off of the input
+                    var friend = {
+                        name: $("#nameInput").val().trim(),
+                        link: $("#imageLink").val().trim(),
+                        scores: [
+                            $("#q-one").val(),
+                            $("#q-two").val(),
+                            $("#q-three").val(),
+                            $("#q-four").val(),
+                            $("#q-five").val(),
+                            $("#q-six").val(),
+                            $("#q-seven").val(),
+                            $("#q-eight").val(),
+                            $("#q-nine").val(),
+                            $("#q-ten").val(),
+                            $("#q-eleven").val(),
+                            $("#q-twelve").val(),
+                            $("#q-thirteen").val()
+                        ]
+                    }
 
 
-                $.post('/api/friends', friend).done(function(data, status) {
+                    // Grab the URL of the website
+                    var currentURL = window.location.origin;
 
-                    console.log(data);
+                    $.post(currentURL + '/api/friends', friend).done(function(data, status) {
+                        console.log(data);
 
+                        $("#matchName").text(data.name);
+                        $('#matchImg').attr("src", data.link);
 
-                    var div1 = document.createElement('div');
-                    div1.id = 'myModal';
-                    div1.className = 'modal fade';
-                    div1.setAttribute("role", "dialog");
-
-                    var innerDiv1m = document.createElement('div');
-                    innerDiv1m.className = 'modal-dialog modal-sm';
-                    div1.appendChild(innerDiv1m);
-
-                    var innerDiv2m = document.createElement('div');
-                    innerDiv2m.className = 'modal-content';
-                    innerDiv1m.appendChild(innerDiv2m);
-
-                    var innerDiv3 = document.createElement('div');
-                    innerDiv3.className = 'modal-header';
-                    innerDiv2m.appendChild(innerDiv3);
-
-                    var buttonM = document.createElement("button");
-                    buttonM.className = 'close';
-                    buttonM.setAttribute("data-dismiss", "modal");
-                    buttonM.setAttribute("aria-hidden", "true");
-                    buttonM.setAttribute("value", "Close");
-                    innerDiv3.appendChild(buttonM);
-
-                    var headerM = document.createElement("H4");
-                    headerM.className = 'modal-title';
-                    innerDiv3.appendChild(headerM);
-
-                    var innerDiv31 = document.createElement('div');
-                    innerDiv31.className = 'modal-body';
-                    innerDiv2m.appendChild(innerDiv31);
-
-                    var para = document.createElement('p');
-                    innerDiv31.appendChild(para);
-                    para.innerHTML = "paragraph";
-
-                    var innerDiv32 = document.createElement('div');
-                    innerDiv32.className = 'modal-footer';
-                    innerDiv2m.appendChild(innerDiv32);
-
-                    var closeButton = document.createElement("input");
-                    closeButton.className = 'btn btn-default';
-                    closeButton.setAttribute("data-dismiss", "modal");
-                    closeButton.setAttribute("type", "button");
-                    closeButton.setAttribute("value", "Close");
-                    innerDiv32.appendChild(closeButton);
-
-                    document.getElementsByTagName('body')[0].appendChild(div1);
-                    // var html = '<div id="myModal" class="modal fade in">';
-                    // html += '<div class="modal-header">';
-                    // html += '<a class="close" data-dismiss="modal">×</a>';
-                    // html += '<h4>' + data.name + '</h4>'
-                    // html += '</div>';
-                    // html += '<div class="modal-body">';
-                    // html += "<img src='" + data.link + "' height='400px'>";
-                    // html += '</div>';
-                    // html += '<div class="modal-footer">';
-                    // html += '<span class="btn" data-dismiss="modal">';
-                    // html += 'Close';
-                    // html += '</span>'; // close button
-                    // html += '</div>'; // footer
-                    // html += '</div>'; // modalWindow
-                    // $("#friendModal").html(html);
-                    // $("#modalWindow").modal();
-                });
+                        // Show the modal with the best match 
+                        $("#resultsModal").modal('toggle');
+                    });
+                }
+                else {
+                    alert("Please fill out all areas of the form");
+                }
 
 
             });
