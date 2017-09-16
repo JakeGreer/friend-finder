@@ -35,7 +35,8 @@ fs.readFile("app/data/friends.txt", "utf8", function(err, data) {
         friendsList[j] = new users(
             friends[i], //name
             friends[i + 1], //link
-            [parseInt(friends[i + 3]), //scores
+            [parseInt(friends[i + 2]), //scores
+                parseInt(friends[i + 3]),
                 parseInt(friends[i + 4]),
                 parseInt(friends[i + 5]),
                 parseInt(friends[i + 6]),

@@ -192,10 +192,11 @@
                             <option value="5">5 (Accurate)</option>
                         </select>
                     </div>
-                    <button target="friendModal" type="submit" class="text-center form-group btn btn-primary btn-lg submit" id="submit">Submit</button>
+                    <button type="submit" class="text-center form-group btn btn-primary btn-lg submit" id="submit">Submit</button>
                 </form>
             </div>
         </div>
+
     </div>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
@@ -203,7 +204,13 @@
 
 
     <script type="text/javascript">
+        var friendsList = require("./app/data/friends.js");
         $(document).ready(function() {
+
+
+            var bestMatch = [];
+            var score = 0;
+
             $("#submit").on("click", function(event) {
                 event.preventDefault();
 
@@ -227,6 +234,16 @@
                         $("#q-thirteen").val()
                     ]
                 }
+
+                for (var i = 0; i < friendsList.length; i++) {
+                    for (var j = 0; j < friendsList[i].scores.length; j++) {
+                        score += (Math.abs((friendsList[i].scores[j] - friend.scores[j])));
+                    }
+                    bestMatch[i] = score;
+                    score = 0;
+                }
+
+                console.log(bestMatch)
 
                 $.post('/api/friends', friend).done(function(data) {
                     console.log(data);

@@ -1,1 +1,1 @@
-Jake, https://jakegreer.net/assets/images/headpic2.jpg, 5,3,4,2,5,3,4,1,3,2,4,2,5, Billy, linktoanotherplace.com, 1,1,1,1,1,1,1,1,1,1,1,1,1
+Jake, https://jakegreer.net/assets/images/headpic2.jpg, 5,3,4,2,5,3,4,1,3,2,4,2,5, Billy, linktoanotherplace.com, 2,1,1,1,1,1,1,1,1,1,1,1,4
