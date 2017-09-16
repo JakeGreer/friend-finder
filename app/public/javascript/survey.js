@@ -1,5 +1,3 @@
-var friends = require("./../../data/friends.js");
-
 $(document).ready(function() {
 
     $("#submit").on("click", function(event) {
@@ -9,8 +7,8 @@ $(document).ready(function() {
         //bestMatch is going to store the absolute value scores between each person
         //score will keep track of the absolute value for all of the scores.
 
-        var bestMatch = [];
-        var score = 0;
+        // var bestMatch = [];
+        // var score = 0;
         //builds a new friend object based off of the input
         var friend = {
             name: $("#nameInput").val().trim(),
@@ -32,15 +30,15 @@ $(document).ready(function() {
             ]
         }
 
-        for (var i = 0; i < friendsList.length; i++) {
-            for (var j = 0; j < friendsList[i].scores.length; j++) {
-                score += (Math.abs((friendsList[i].scores[j] - friend.scores[j])));
-            }
-            bestMatch[i] = score;
-            score = 0;
-        }
+        // for (var i = 0; i < friendsList.length; i++) {
+        //     for (var j = 0; j < friendsList[i].scores.length; j++) {
+        //         score += (Math.abs((friendsList[i].scores[j] - friend.scores[j])));
+        //     }
+        //     bestMatch[i] = score;
+        //     score = 0;
+        // }
 
-        console.log(bestMatch)
+        // console.log(bestMatch)
 
         $.post('/api/friends', friend).done(function(data) {
             console.log(data);

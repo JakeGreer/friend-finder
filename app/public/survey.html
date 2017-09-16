@@ -15,12 +15,15 @@
 
 <body>
     <div class="jumbotron text-center center-block">
-        <h1 class="display-3">Survey</h1>
-        <p class="lead">Answer the following questions to best match yourself</p>
-        <hr class="my-4">
+        <div class="container">
+            <h1 class="display-3">Survey</h1>
+            <p class="lead">Answer the following questions to best match yourself</p>
+            <hr class="my-4">
+        </div>
+
     </div>
 
-    <div class="container">
+    <div class="container" id="friendModal">
         <div class="row">
             <div class="col-md-12">
                 <form method="POST" role="form">
@@ -38,9 +41,9 @@
 
                     <div class="form-group questions">
                         <h3>Question 1</h3>
-                        <label for="q-one">Your mind is always buzzing with unexplored ideas and plans.</label>
-                        <select class="custom-select d-block my-1" id="q-one" required>
-                          <option selected>Select an option..</option>
+                        <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
+                        <select class="chosen-select" id="q-one" required>
+                          <option value=""></option>
                           <option value="1">1 (Inaccurate)</option>
                           <option value="2">2</option>
                           <option value="3">3</option>
@@ -50,9 +53,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 2</h3>
-                        <label for="q-two">You make friends easily.</label>
-                        <select class="custom-select d-block my-1" id="q-two" required>
-                              <option selected>Select an option..</option>
+                        <h4>You make friends easily.</h4>
+                        <select class="chosen-select" id="q-two" required>
+                              <option value=""></option>
                               <option value="1">1 (Inaccurate)</option>
                               <option value="2">2</option>
                               <option value="3">3</option>
@@ -62,9 +65,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 3</h3>
-                        <label for="q-three">You like to solve complex problems.</label>
-                        <select class="custom-select d-block my-1" id="q-three" required>
-                            <option selected>Select an option..</option>
+                        <h4>You like to solve complex problems.</h4>
+                        <select class="chosen-select" id="q-three" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -74,9 +77,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 4</h3>
-                        <label for="q-four">You are afraid of doing the wrong thing.</label>
-                        <select class="custom-select d-block my-1" id="q-four" required>
-                            <option selected>Select an option..</option>
+                        <h4>You are afraid of doing the wrong thing.</h4>
+                        <select class="chosen-select" id="q-four" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -86,9 +89,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 5</h3>
-                        <label for="q-five">People can rarely upset you.</label>
-                        <select class="custom-select d-block my-1" id="q-five" required>
-                                <option selected>Select an option..</option>
+                        <h4>People can rarely upset you.</h4>
+                        <select class="chosen-select" id="q-five" required>
+                                <option value=""></option>
                                 <option value="1">1 (Inaccurate)</option>
                                 <option value="2">2</option>
                                 <option value="3">3</option>
@@ -98,9 +101,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 6</h3>
-                        <label for="q-six">It is often difficult for you to relate to other people’s feelings.</label>
-                        <select class="custom-select d-block my-1" id="q-six" required>
-                            <option selected>Select an option..</option>
+                        <h4>It is often difficult for you to relate to other people’s feelings.</h4>
+                        <select class="chosen-select" id="q-six" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -110,9 +113,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 7</h3>
-                        <label for="q-seven">In a discussion, truth should be more important than people’s sensitivities.</label>
-                        <select class="custom-select d-block my-1" id="q-seven" required>
-                            <option selected>Select an option..</option>
+                        <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
+                        <select class="chosen-select" id="q-seven" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -122,9 +125,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 8</h3>
-                        <label for="q-eight">You rarely get carried away by fantasies and ideas.</label>
-                        <select class="custom-select d-block my-1" id="q-eight" required>
-                            <option selected>Select an option..</option>
+                        <h4>You rarely get carried away by fantasies and ideas.</h4>
+                        <select class="chosen-select" id="q-eight" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -134,9 +137,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 9</h3>
-                        <label for="q-nine">You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</label>
-                        <select class="custom-select d-block my-1" id="q-nine" required>
-                            <option selected>Select an option..</option>
+                        <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
+                        <select class="chosen-select" id="q-nine" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -146,9 +149,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 10</h3>
-                        <label for="q-ten">You rather hang with a group of people rather than be by yourself.</label>
-                        <select class="custom-select d-block my-1" id="q-ten" required>
-                            <option selected>Select an option..</option>
+                        <h4>You rather hang with a group of people rather than be by yourself.</h4>
+                        <select class="chosen-select" id="q-ten" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -158,9 +161,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 11</h3>
-                        <label for="q-eleven">You see beauty in things that others might not notice.</label>
-                        <select class="custom-select d-block my-1" id="q-eleven" required>
-                            <option selected>Select an option..</option>
+                        <h4>You see beauty in things that others might not notice.</h4>
+                        <select class="chosen-select" id="q-eleven" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -170,9 +173,9 @@
                     </div>
                     <div class="form-group questions">
                         <h3>Question 12</h3>
-                        <label for="q-twelve">You are afraid of drawing attention to yourself.</label>
-                        <select class="custom-select d-block my-1" id="q-twelve" required>
-                            <option selected>Select an option..</option>
+                        <h4>You are afraid of drawing attention to yourself.</h4>
+                        <select class="chosen-select" id="q-twelve" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -182,9 +185,9 @@
                     </div>
                     <div class="form-group questions last-q">
                         <h3>Question 13</h3>
-                        <label for="q-thirteen">You express childlike joy.</label>
-                        <select class="custom-select d-block my-1" id="q-thirteen" required>
-                            <option selected>Select an option..</option>
+                        <h4>You express childlike joy.</h4>
+                        <select class="chosen-select" id="q-thirteen" required>
+                            <option value=""></option>
                             <option value="1">1 (Inaccurate)</option>
                             <option value="2">2</option>
                             <option value="3">3</option>
@@ -192,17 +195,126 @@
                             <option value="5">5 (Accurate)</option>
                         </select>
                     </div>
-                    <button type="submit" class="text-center form-group btn btn-primary btn-lg submit" id="submit">Submit</button>
+                    <button data-toggle="modal" data-target="#myModal" type="submit" class="text-center center-block form-group btn btn-primary btn-lg submit" id="submit">Submit</button>
                 </form>
+                <div class="col-md-12 text-center" id="api">
+                    <a href="/">Home</a> | <a href="/api/friends">API Friends Link</a>
+                </div>
             </div>
         </div>
 
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js">
+    </script>
     <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
 
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
-    <script type="text/javascript" src="javascript/survey.js"></script>
+    <!-- <script type="text/javascript" src="javascript/survey.js"></script> -->
+    <script type="text/javascript">
+        $(document).ready(function() {
+
+            $("#submit").on("click", function(event) {
+                event.preventDefault();
+
+                //builds a new friend object based off of the input
+                var friend = {
+                    name: $("#nameInput").val().trim(),
+                    link: $("#imageLink").val().trim(),
+                    scores: [
+                        $("#q-one").val(),
+                        $("#q-two").val(),
+                        $("#q-three").val(),
+                        $("#q-four").val(),
+                        $("#q-five").val(),
+                        $("#q-six").val(),
+                        $("#q-seven").val(),
+                        $("#q-eight").val(),
+                        $("#q-nine").val(),
+                        $("#q-ten").val(),
+                        $("#q-eleven").val(),
+                        $("#q-twelve").val(),
+                        $("#q-thirteen").val()
+                    ]
+                }
+
+
+
+                $.post('/api/friends', friend).done(function(data, status) {
+
+                    console.log(data);
+
+
+                    var div1 = document.createElement('div');
+                    div1.id = 'myModal';
+                    div1.className = 'modal fade';
+                    div1.setAttribute("role", "dialog");
+
+                    var innerDiv1m = document.createElement('div');
+                    innerDiv1m.className = 'modal-dialog modal-sm';
+                    div1.appendChild(innerDiv1m);
+
+                    var innerDiv2m = document.createElement('div');
+                    innerDiv2m.className = 'modal-content';
+                    innerDiv1m.appendChild(innerDiv2m);
+
+                    var innerDiv3 = document.createElement('div');
+                    innerDiv3.className = 'modal-header';
+                    innerDiv2m.appendChild(innerDiv3);
+
+                    var buttonM = document.createElement("button");
+                    buttonM.className = 'close';
+                    buttonM.setAttribute("data-dismiss", "modal");
+                    buttonM.setAttribute("aria-hidden", "true");
+                    buttonM.setAttribute("value", "Close");
+                    innerDiv3.appendChild(buttonM);
+
+                    var headerM = document.createElement("H4");
+                    headerM.className = 'modal-title';
+                    innerDiv3.appendChild(headerM);
+
+                    var innerDiv31 = document.createElement('div');
+                    innerDiv31.className = 'modal-body';
+                    innerDiv2m.appendChild(innerDiv31);
+
+                    var para = document.createElement('p');
+                    innerDiv31.appendChild(para);
+                    para.innerHTML = "paragraph";
+
+                    var innerDiv32 = document.createElement('div');
+                    innerDiv32.className = 'modal-footer';
+                    innerDiv2m.appendChild(innerDiv32);
+
+                    var closeButton = document.createElement("input");
+                    closeButton.className = 'btn btn-default';
+                    closeButton.setAttribute("data-dismiss", "modal");
+                    closeButton.setAttribute("type", "button");
+                    closeButton.setAttribute("value", "Close");
+                    innerDiv32.appendChild(closeButton);
+
+                    document.getElementsByTagName('body')[0].appendChild(div1);
+                    // var html = '<div id="myModal" class="modal fade in">';
+                    // html += '<div class="modal-header">';
+                    // html += '<a class="close" data-dismiss="modal">×</a>';
+                    // html += '<h4>' + data.name + '</h4>'
+                    // html += '</div>';
+                    // html += '<div class="modal-body">';
+                    // html += "<img src='" + data.link + "' height='400px'>";
+                    // html += '</div>';
+                    // html += '<div class="modal-footer">';
+                    // html += '<span class="btn" data-dismiss="modal">';
+                    // html += 'Close';
+                    // html += '</span>'; // close button
+                    // html += '</div>'; // footer
+                    // html += '</div>'; // modalWindow
+                    // $("#friendModal").html(html);
+                    // $("#modalWindow").modal();
+                });
+
+
+            });
+        });
+    </script>
 
 </body>
 

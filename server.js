@@ -23,10 +23,11 @@ app.use(bodyParser.json({ type: "application/vnd.api+json" }));
 require("./app/routing/apiRoutes.js")(app);
 require("./app/routing/htmlRoutes.js")(app);
 
+
 app.use(express.static(__dirname + '/app/public'));
 
-var friends = require("./app/data/friends.js");
-console.log(friends);
+
+
 
 
 app.listen(PORT, function() {
