@@ -25,6 +25,9 @@ require("./app/routing/htmlRoutes.js")(app);
 
 app.use(express.static(__dirname + '/app/public'));
 
+var friends = require("./app/data/friends.js");
+console.log(friends);
+
 
 app.listen(PORT, function() {
     console.log("App listening on PORT " + PORT);

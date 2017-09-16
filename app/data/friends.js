@@ -17,8 +17,6 @@ fs.readFile("app/data/friends.txt", "utf8", function(err, data) {
     if (err) {
         return console.log(err);
     }
-    //logs that the file is reading...
-    console.log("Reading from list of friends...");
 
     //this splits the data in the text file by every comma and stores each compenent into one long arrray
     var friends = data.split(",");
@@ -54,8 +52,10 @@ fs.readFile("app/data/friends.txt", "utf8", function(err, data) {
         j++;
     }
 
-    console.log(friendsList);
+    // console.log(friendsList);
 })
 
 //exports the final array
-module.exports = friendsList;
+exports.friendsList = [
+    "this", "that", [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+];

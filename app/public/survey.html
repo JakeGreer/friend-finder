@@ -202,57 +202,7 @@
 
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-
-    <script type="text/javascript">
-        var friendsList = require("./app/data/friends.js");
-        $(document).ready(function() {
-
-
-            var bestMatch = [];
-            var score = 0;
-
-            $("#submit").on("click", function(event) {
-                event.preventDefault();
-
-                //builds a new friend object based off of the input
-                var friend = {
-                    name: $("#nameInput").val().trim(),
-                    link: $("#imageLink").val().trim(),
-                    scores: [
-                        $("#q-one").val(),
-                        $("#q-two").val(),
-                        $("#q-three").val(),
-                        $("#q-four").val(),
-                        $("#q-five").val(),
-                        $("#q-six").val(),
-                        $("#q-seven").val(),
-                        $("#q-eight").val(),
-                        $("#q-nine").val(),
-                        $("#q-ten").val(),
-                        $("#q-eleven").val(),
-                        $("#q-twelve").val(),
-                        $("#q-thirteen").val()
-                    ]
-                }
-
-                for (var i = 0; i < friendsList.length; i++) {
-                    for (var j = 0; j < friendsList[i].scores.length; j++) {
-                        score += (Math.abs((friendsList[i].scores[j] - friend.scores[j])));
-                    }
-                    bestMatch[i] = score;
-                    score = 0;
-                }
-
-                console.log(bestMatch)
-
-                $.post('/api/friends', friend).done(function(data) {
-                    console.log(data);
-                });
-
-            });
-        });
-    </script>
-
+    <script type="text/javascript" src="javascript/survey.js"></script>
 
 </body>
 
