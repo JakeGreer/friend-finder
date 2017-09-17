@@ -1,16 +1,31 @@
 body {
     font-family: 'Montserrat', sans-serif;
-    background-color: #BAD5EB;
+    background-image: url("https://t3.ftcdn.net/jpg/00/48/16/30/240_F_48163025_66ZJFueF5wpJD79CoS991DSvTFHuXEET.jpg");
+    background-size: contain;
 }
 
 hr {
-    background-color: #fff;
+    background-color: #420D0D;
 }
 
-.jumbotron {
-    background-color: #428bca;
-    color: #fff;
+#surveyJumbo {
+    background-image: url("https://typeset-beta.imgix.net/rehost/2016/9/13/e5c323a5-1458-4f1b-8b34-0cce0f8933bf.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #420D0D;
     text-shadow: 1px 1px 2px black;
+}
+
+#mainJumbo {
+    background-image: url("http://ll-c.ooyala.com/e1/U3d3duYjE6IP4_anJWRVn9mOBEO5I7FQ/promo322342056");
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    text-shadow: 3px 3px 2px #811B1B;
+}
+
+#mainJumbo p {
+    font-size: 25px;
 }
 
 .modal-info {
@@ -27,9 +42,15 @@ hr {
     text-shadow: 1px 1px 2px black;
 }
 
+.questions h4 {
+    font-size: 25px;
+    font-weight: bold;
+}
+
 .questions {
     padding: 10px;
-    border: 1px solid #fff;
+    border: 3px solid #420D0D;
+    font-weight: bold;
 }
 
 form label {
@@ -42,7 +63,7 @@ form label {
 
 .last-q {
     padding-bottom: 15px;
-    border-bottom: 2px solid #eee;
+    border-bottom: 2px solid #420D0D;
 }
 
 .submit {
@@ -52,4 +73,6 @@ form label {
 
 #api {
     padding-bottom: 40px;
+    font-size: 25px;
+    text-shadow: 1px 1px 1px black;
 }
